@@ -12,12 +12,12 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@worker \'hostname\''
+                sh 'ssh deb@worker \'hostname\''
             }
         }
         stage("Second step") {
             steps {
-                sh 'ssh root@worker \'uptime\''
+                sh 'ssh deb@worker \'uptime\''
             }
         }
     }
