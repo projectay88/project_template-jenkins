@@ -7,9 +7,10 @@ pipeline {
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
     }
-    stage ('my echo') {
+    stages ('my echo') {
+        steps{
         echo "error"
         echo "error"
-        
+        }
         }
     }
