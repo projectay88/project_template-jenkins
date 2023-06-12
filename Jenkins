@@ -1,22 +1,15 @@
 #!groovy
-// Check ub1 properties
+// Check jenkins-worker properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent any
+    agent debian
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
     }
-    stages {
-        stage("First step") {
-            steps {
-                sh 'ssh deb@worker \'hostname\''
-            }
-        }
-        stage("Second step") {
-            steps {
-                sh 'ssh deb@worker \'uptime\''
-            }
+    stage ('my echo') {
+        echo "error"
+        echo "error"
+        
         }
     }
-}
