@@ -1,16 +1,13 @@
 #!groovy
 // Check jenkins-worker properties
-properties([disableConcurrentBuilds()])
-
 pipeline {
     agent any
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-    }
-    stages ('my echo') {
-        steps{
-        echo "error"
-        echo "error"
-        }
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
         }
     }
+}
