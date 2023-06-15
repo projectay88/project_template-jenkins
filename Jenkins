@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent debian
 
     stages {
         stage('Hello') {
