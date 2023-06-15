@@ -1,6 +1,7 @@
 pipeline {
-    agent debian
-
+    agent {
+            label "debian"
+        }
     stages {
         stage('Hello') {
             steps {
