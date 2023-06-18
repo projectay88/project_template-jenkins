@@ -3,7 +3,7 @@ pipeline {
             label "debian"
         }
     options {
-            timestaps()
+            timestamps()
         }
     stages {
         stage('Hello') {
