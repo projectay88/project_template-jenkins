@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sudo apt-get update
-                sudo apt-get install ca-certificates curl gnupg
+                sh 'sudo apt-get update'
+                sh 'sudo apt-get install ca-certificates curl gnupg'
             }
         }
             }
