@@ -1,4 +1,4 @@
 FROM debian
-RUN apt-get update 
-RUN apt install vim htop curl
+RUN apt-get update && \ 
+    apt install vim htop curl
 
