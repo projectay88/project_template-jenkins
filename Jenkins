@@ -6,10 +6,12 @@ pipeline {
             timestamps()
         }
     stages {
-        stage('Hello') {
+        stage('create docker image') {
             steps {
-                sh 'sudo apt-get update'
-                sh 'sudo apt-get install ca-certificates curl gnupg'
+                echo '----docker image----'
+                dir('.'){
+                        sh 'docker build .'
+                    }
             }
         }
             }
