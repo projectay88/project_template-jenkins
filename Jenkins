@@ -8,18 +8,9 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                sudo apt-get update
+                sudo apt-get install ca-certificates curl gnupg
             }
         }
-        stage('who is branch?'){
-                steps {
-                        echo 'who is branch'
-                    }
             }
-        stage('name host'){
-                steps {
-                        sh 'hostname'
-                    }
-            }
-    }
 }
