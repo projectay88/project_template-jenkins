@@ -1,3 +1,3 @@
 FROM debian
-run apt-get update
-run apt install vim
+RUN apt-get update;apt install vim htop 
+
