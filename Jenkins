@@ -15,7 +15,7 @@ pipeline {
             }
         stage('name host'){
                 steps {
-                        hostname
+                        ssh 'hostname'
                     }
             }
     }
