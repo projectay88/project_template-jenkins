@@ -1,6 +1,6 @@
 pipeline {
     agent {
-            label "worker"
+            label "debian"
         }
     stages {
         stage('Hello') {
@@ -11,6 +11,11 @@ pipeline {
         stage('who is branch?'){
                 steps {
                         echo 'who is branch'
+                    }
+            }
+        stage('name host'){
+                steps {
+                        hostname
                     }
             }
     }
