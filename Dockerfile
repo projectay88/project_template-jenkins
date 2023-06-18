@@ -1,3 +1,3 @@
 FROM debian
-run apt update
-run apt install htop
+run apt-get update
+run apt-get install htop
