@@ -2,6 +2,9 @@ pipeline {
     agent {
             label "debian"
         }
+    options {
+            timestaps()
+        }
     stages {
         stage('Hello') {
             steps {
