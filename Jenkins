@@ -3,7 +3,7 @@ pipeline {
             label "debian"
         }
     triggers { 
-        cron('H/2 * * * *')
+        cron('H/10 * * * *')
         }
     stages {
         stage('create docker image') {
