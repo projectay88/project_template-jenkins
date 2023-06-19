@@ -2,7 +2,9 @@ pipeline {
     agent {
             label "debian"
         }
-    triggers { pollSCM('*') }
+    triggers { 
+        cron('H */4 * * 1-5')
+        }
     stages {
         stage('create docker image') {
             steps {
