@@ -13,17 +13,7 @@ pipeline {
                 echo "!!!!docker login!!!!"
                 }
             }
-        stage('clear alpine') {
-            steps {
-                echo "clear alpine"
-                sh 'docker build -t projectay889/my_alpine .'
-                    }
-              }
-        stage('docker push') {
-                steps {
-                        sh 'docker push projectay889/my_alpine'
-                    }
-            }
+        
           }
       }
 
