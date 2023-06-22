@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('docker hub') {
                 steps{
-                sh '''docker -u projectay889 -p 112233gT!'''
+                sh '''docker login -u projectay889 -p 112233gT!'''
                 }
             }
         
