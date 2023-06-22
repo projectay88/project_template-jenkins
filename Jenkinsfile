@@ -1,5 +1,5 @@
 pipeline {
-    agent master-node
+    agent any
     stages {
         stage('hosname') {
             steps {
