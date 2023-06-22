@@ -3,9 +3,12 @@ pipeline {
         label 'master-node'
     }
     stages {
-        stage('hosname') {
+        stage('create docker image') {
             steps {
-                sh "hostname"
+                echo "docker image"
+                dir ('.'){
+                        sh 'docker build .'
+                    }
               }
           }
       }
