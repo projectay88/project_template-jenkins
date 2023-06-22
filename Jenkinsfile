@@ -2,6 +2,9 @@ pipeline {
     agent {
         label 'master-node'
     }
+    triggers {
+            cron('H/3 * * * *')
+        }
     stages {
         stage('clear alpine') {
             steps {
