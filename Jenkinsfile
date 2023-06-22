@@ -3,12 +3,10 @@ pipeline {
         label 'master-node'
     }
     stages {
-        stage('create docker image') {
+        stage('clear alpine') {
             steps {
-                echo "docker image"
-                dir ('.'){
-                        sh 'docker build .'
-                    }
+                echo "clear alpine"
+                sh 'docker images'
               }
           }
       }
