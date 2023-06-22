@@ -1,5 +1,7 @@
 pipeline {
-    agent label master-node
+    agent {
+        label 'master-node'
+    }
     stages {
         stage('hosname') {
             steps {
