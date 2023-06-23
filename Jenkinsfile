@@ -6,9 +6,10 @@ pipeline {
             cron('H/3 * * * *')
         }
     stages {
-        withCredentials([usernamePassword(credentialsId: 'dockerhub_pass', usernameVariable: 'projectay889', passwordVariable: '112233gT!')]
         stage ('docker hub') {
                 steps{
+                withCredentials([usernamePassword(credentialsId: 'dockerhub_pass', usernameVariable: 'projectay889', passwordVariable: '112233gT!')]
+
                 sh '''docker login -u $USERNAME -p $PASSWORD'''
                 }
             }
