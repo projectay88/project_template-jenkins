@@ -9,7 +9,7 @@ pipeline {
         stage ('docker hub') {
                 steps {
                 sh """
-                docker login -u $USERNAME -p $PASSWORD
+                docker ps -a
                 """
                 }
                              }
