@@ -8,7 +8,7 @@ pipeline {
     stages {
 	stage ('git install') {
 		steps {
-		sh 'uptime'
+		sh 'sudo apt install git'
 		      }
 			      
                                      }
