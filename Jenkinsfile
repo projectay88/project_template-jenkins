@@ -8,11 +8,11 @@ pipeline {
     stages {
 	stage ('git install') {
 		steps {
-		sh "sudo apt install git"
+		sh 'sudo apt install git'
 		      }
 			      
         steps {
-        sh "sudo apt-get update; sudo apt-get install ca-certificates curl gnupg"
+        sh 'sudo apt-get update; sudo apt-get install ca-certificates curl gnupg'
                 }
                              }
         
