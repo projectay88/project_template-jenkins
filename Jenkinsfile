@@ -10,7 +10,7 @@ pipeline {
 		steps {
 		sh "sudo apt install git"
 		      }
-			      }
+			      
         steps {
         sh "sudo apt-get update; sudo apt-get install ca-certificates curl gnupg"
                 }
