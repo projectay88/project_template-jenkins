@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'master-node'
+        label 'debian'
     }
     triggers {
             cron('H/3 * * * *')
