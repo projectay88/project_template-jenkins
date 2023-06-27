@@ -6,11 +6,12 @@ pipeline {
             cron('H/3 * * * *')
         }
     stages {
-        stage ('docker hub') {
+        stage ('docker install') {
                 steps {
-                sh """
-                docker ps -a
-                """
+                sh "
+                sudo apt-get update;
+                sudo apt-get install ca-certificates curl gnupg
+                "
                 }
                              }
         
