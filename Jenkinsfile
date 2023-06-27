@@ -9,7 +9,7 @@ pipeline {
 	stage ('git install') {
 		steps {
 		sh 'sudo apt install git'
-		      }
+		      },
 			      
                                      }
     stages {
